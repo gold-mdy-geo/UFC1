@@ -176,3 +176,18 @@ def decompose(input):
 
 return output
 
+
+def visual2logical(input):
+    ##########Pattern
+
+    output = input
+
+    output = re.sub(
+        u'((?:\u1031)?)((?:\u103c)?)((?:\u1064)?)([\u1000-\u1021])((?:\u1039[\u1000-\u1021])?)((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)', '\\3\\4\\5\\2\\6\\7\\8\\1\\9\\10', output)
+
+    output = re.sub(u'(\u102F)([\u102D\u102E])', '\\2\\1', output)
+    output = re.sub(u'(\u1030)([\u102D\u102E])', '\\2\\1', output)
+    output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
+
+return output
+
