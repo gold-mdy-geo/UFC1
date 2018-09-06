@@ -2,6 +2,7 @@
 # convert Zg to Unicode (replace,decompose,visual2logical)
 import re
 
+
 def replace(input):
     output = input
     #  nyalay
@@ -61,7 +62,7 @@ def replace(input):
     #  thagyi
     output = output.replace(u'\u1086', u'\u103F')
 
-return output
+    return output
 
 
 def decompose(input):
@@ -173,8 +174,7 @@ def decompose(input):
     #  dayin-hmote
     output = re.sub(u'\u106E', u'\u100D\u1039\u100D', output)
     #  dayinkaut
-
-return output
+    return output
 
 
 def visual2logical(input):
@@ -188,8 +188,7 @@ def visual2logical(input):
     output = re.sub(u'(\u102F)([\u102D\u102E])', '\\2\\1', output)
     output = re.sub(u'(\u1030)([\u102D\u102E])', '\\2\\1', output)
     output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
-
-return output
+    return output
 
 
 def convert(input):
@@ -198,6 +197,6 @@ def convert(input):
     output = decompose(output)
     output = visual2logical(output)
 
-return output
+    return output
 
 
