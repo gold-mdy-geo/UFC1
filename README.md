@@ -9,15 +9,28 @@ This is the Myanmar Language Converter design created by Geo_Gold_Team.This webs
 
 # Name & Responsibility
 1. Ma May Thu Tun
+
    Team lead , Lead Dev + DevOps
+
 2. Ma Marlar
+
    UI/UX Lead
+
 3. Ma May Mon Thu
+
    UI/UX Dev
+
+
 4. Ma Sandar Soe
+
    Dev 1
+
 5. Ma Nyo Nyo Htwe
+
    Dev 2
+
 6. Ma Phue Phue Khaing Min
+
+
    Test & Documentation
 
