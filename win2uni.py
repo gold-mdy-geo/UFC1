@@ -48,5 +48,31 @@ def replace(input):
     output = output.replace(u'\u005B', u'\u101F')  # ha
     output = output.replace(u'\u0056', u'\u1020')  # la-gyi
     output = output.replace(u'\u0074', u'\u1021')  # ah
+    
+    # #####
+    output = output.replace(u'\u00A3', u'\u1023')  # ka+ku
+    output = output.replace(u'\u00FE', u'\u1024')  # eei
+    output = output.replace(u'\u007B', u'\u1027')  # a
+    output = output.replace(u'\u00FC', u'\u104C')  # nike
+    output = output.replace(u'\u00ED', u'\u104D')  # ywae
+    output = output.replace(u'\u00A4', u'\u104E')  # lae-kaung
+    output = output.replace(u'\u005C', u'\u104F')  # ei
+    output = output.replace(u'\u00F3', u'\u103F')  # tha-gyi
+
+    #  ##### Number
+    output = output.replace(u'\u0031', u'\u1041')  # one
+    output = output.replace(u'\u0032', u'\u1042')  # two
+    output = output.replace(u'\u0033', u'\u1043')  # three
+    output = output.replace(u'\u0034', u'\u1044')  # four
+    output = output.replace(u'\u0035', u'\u1045')  # five
+    output = output.replace(u'\u0036', u'\u1046')  # six
+    output = output.replace(u'\u0037', u'\u1047')  # seven
+    output = output.replace(u'\u0038', u'\u1048')  # eight
+    output = output.replace(u'\u0039', u'\u1049')  # nine
+
+    output = output.replace(u'\u003F', u'\u104A')  # 1chaung-pote
+    output = output.replace(u'\u002F', u'\u104B')  # 2chaung-pote
+
+    # #####
 
     return output
