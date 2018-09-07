@@ -172,3 +172,14 @@ def decompose(input):
     output = re.sub(u'\u00D7', u'\u100D\u1039\u100D', output)  # double-da-yin-kaut
     return output
 
+def visual2logical(input):
+    output = input
+    # ###pattern
+    output = re.sub(
+        u'((?:\u1031)?)((?:\u103c)?)((?:\u0046)?)([\u1000-\u1021])((?:\u1039[\u1000-\u1021])?)((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
+        '\\3\\4\\5\\2\\6\\7\\8\\1\\9\\10', output)
+
+    output = re.sub('\u0046', u'\u1004\u103A\u1039', output)  # up-ngathat
+
+    return output
+
