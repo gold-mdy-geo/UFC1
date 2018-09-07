@@ -4,7 +4,7 @@
 # Example: main.py zawgyi.txt unicode.txt
 
 import codecs
-import rununi2win.py
+import win2uni
 import sys
 
 input_file_name = sys.argv[1]
