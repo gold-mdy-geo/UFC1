@@ -39,3 +39,8 @@ This is the Myanmar Language Converter design created by Geo_Gold_Team.This webs
 
 # https://geo-gold-converter.herokuapp.com/
 
+
+# License
+
+MIT
+
