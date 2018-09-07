@@ -74,5 +74,34 @@ def replace(input):
     output = output.replace(u'\u002F', u'\u104B')  # 2chaung-pote
 
     # #####
+    output = output.replace(u'\u0024', u'\u1000\u103b\u1015\u103a')  # kyat-sign
+
+    output = output.replace(u'\u0067', u'\u102B')  # yay-char-gi
+    output = output.replace(u'\u006D', u'\u102C')  # yay-char-lay
+    output = output.replace(u'\u0064', u'\u102D')  # lone-gyi-tin
+    output = output.replace(u'\u0044', u'\u102E')  # lone-gyi-tin-san-khat
+    output = output.replace(u'\u004B', u'\u102F')  # 1-chaung-ngin
+    output = output.replace(u'\u006B', u'\u102F')
+    output = output.replace(u'\u004C', u'\u1030')  # 2-chaung-ngin
+    output = output.replace(u'\u006C', u'\u1030')
+    output = output.replace(u'\u0061', u'\u1031')  # tha-way-htoe
+    output = output.replace(u'\u004A', u'\u1032')  # naut-pyit
+    output = output.replace(u'\u0048', u'\u1036')  # ttt
+    output = output.replace(u'\u0055', u'\u1037')  # out-ka-myint
+    output = output.replace(u'\u0059', u'\u1037')
+    output = output.replace(u'\u0068', u'\u1037')
+    output = output.replace(u'\u003B', u'\u1038')  # wit-sa-2lone-paut
+    output = output.replace(u'\u0066', u'\u103A')  # a-thet
+    output = output.replace(u'\u00DF', u'\u103B')  # ya-pit
+    output = output.replace(u'\u0073', u'\u103B')
+    output = output.replace(u'\u0042', u'\u103C')  # ya-yit
+    output = output.replace(u'\u004D', u'\u103C')
+    output = output.replace(u'\u004E', u'\u103C')
+    output = output.replace(u'\u0060', u'\u103C')
+    output = output.replace(u'\u006A', u'\u103C')
+    output = output.replace(u'\u007E', u'\u103C')
+    output = output.replace(u'\u0047', u'\u103D')  # wa-swe
+    output = output.replace(u'\u0053', u'\u103E')  # ha-htoe
+    output = output.replace(u'\u00A7', u'\u103E')
 
     return output
