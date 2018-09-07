@@ -11,12 +11,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/material.min.css')}}">
     <script src="js/material.min.js"></script>
     <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/materialize.min.css')}}"  media="screen,projection"/>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <title></title>
@@ -47,7 +47,7 @@
  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <a class="mdl-navigation__link" href="home.html"><i class="small material-icons">home</i></a>
+      <a class="mdl-navigation__link" href="/home"><i class="small material-icons">home</i></a>
       <!-- Title -->
       <span class="mdl-layout-title">Myanmar Language Converter</span>
       <!-- Add spacer, to align navigation to the right -->
@@ -120,7 +120,7 @@
     </div>
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
+    <script src="{{url_for('static',filename='scripts/main.js')}}"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -135,6 +135,6 @@
     <!-- Built with love using Web Starter Kit -->
       </div>
     <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="{{url_for('static',filename='js/materialize.min.js')}}"></script>
   </body>
 </html>
