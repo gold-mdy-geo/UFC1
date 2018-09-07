@@ -1,4 +1,6 @@
 
+
+
 # -*- coding: utf-8 -*-
 
 # Usage: main.py inputfilename.ext outputfilename.ext
@@ -10,8 +12,8 @@ import sys
 
 input_file_name = sys.argv[1]
 output_file_name = sys.argv[2]
-input_file = codecs.open(input_file_name, encoding='utf-8')
-output_file = codecs.open(output_file_name, encoding='utf-8', mode='w')
+input_file = codecs.open(input_file_name,encoding='utf-8')
+output_file = codecs.open(output_file_name,encoding='utf-8', mode='w')
 
 for input_line in input_file:
   input_line = uni2win.convert(input_line)
@@ -20,8 +22,6 @@ for input_line in input_file:
 
 input_file.close()
 output_file.close()
-
-
 
 
 
