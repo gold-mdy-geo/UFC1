@@ -105,3 +105,70 @@ def replace(input):
     output = output.replace(u'\u00A7', u'\u103E')
 
     return output
+
+def decompose(input):
+    output = input
+    # ##########
+
+    output = re.sub(u'\u0070\u0073', u'\u1008', output)
+    output = re.sub(u'\u1005\u103B', u'\u1008', output)  # za-myin-zwe
+
+    output = re.sub(u'([\u1000-\u1021])\u0046', u'\u0046\\1', output)  # up-ngathat
+    output = re.sub(u'([\u1000-\u1021])\u00D0', u'\u0046\\1\u102E', output)  # with-lgtsk
+    output = re.sub(u'([\u1000-\u1021])\u00D8', u'\u0046\\1\u102D', output)  # with-lgt
+    output = re.sub(u'([\u1000-\u1021])\u00F8', u'\u0046\\1\u1036', output)  # with-ttt
+
+    output = re.sub(u'\u00F0', u'\u102D' + u'\u1036', output)  # lgt-ttt
+    output = re.sub(u'\u00D8', u'\u1004' + u'\u103A' + u'\u1039' + u'\u102D', output)  # ngathat-lgt
+    output = re.sub(u'\u00D0', u'\u1004' + u'\u103A' + u'\u1039' + u'\u102E', output)  # ngathat-lgtsk
+    output = re.sub(u'\u00F8', u'\u1004' + u'\u103A' + u'\u1039' + u'\u1036', output)  # ngathat-ttt
+    output = re.sub(u'\u003A', u'\u102B' + u'\u103A', output)  # yaychar-htoe
+    output = re.sub(u'\u0054', u'\u103D' + u'\u103E', output)  # wa-hatoe
+    output = re.sub(u'\u0049', u'\u103E' + u'\u102F', output)  # hatoe-1chaung
+    output = re.sub(u'\u00AA', u'\u103E' + u'\u1030', output)  # hatoe-2chaung
+    output = re.sub(u'\u0051', u'\u103B' + u'\u103E', output)  # yapit-hatoe
+    output = re.sub(u'\u0052', u'\u103B' + u'\u103D', output)  # yapit-waswe
+    output = re.sub(u'\u0057', u'\u103B' + u'\u103D' + u'\u103E', output)  # yapit-waswe-hatoe
+    output = re.sub(u'[\u003C\u003E]', u'\u103C' + u'\u103D', output)  # yayit-waswe
+    output = re.sub(u'\u00FB', u'\u103C' + u'\u102F', output)  # yayit-1chaung
+
+    output = re.sub(u'\u00D3', u'\u1009\u102C', output)  # nya-lay+yaychar
+
+    output = re.sub(u'\u004F\u0044', u'\u1025\u102E', output)  # u+lgtsk
+    output = re.sub(u'\u1025\u102E', u'\u1026', output)
+    output = re.sub(u'\u004F\u0044', u'\u1026', output)
+
+    # ##### pat-sint
+
+    output = re.sub(u'\u00FA', u"\u1039\u1000", output)  # ka
+    output = re.sub(u'\u00A9', u'\u1039\u1001', output)  # kha
+    output = re.sub(u'\u00BE', u'\u1039\u1002', output)  # ga-nge
+    output = re.sub(u'\u00A2', u'\u1039\u1003', output)  # ga-gyi
+    output = re.sub(u'\u00F6', u"\u1039\u1005", output)  # sa-lone
+    output = re.sub(u'\u00E4', u'\u1039\u1006', output)  # sa-lane
+    output = re.sub(u'\u00C6', u'\u1039\u1007', output)  # za
+    output = re.sub(u'\u00D1', u'\u1039\u1008', output)  # za-zwe
+    output = re.sub(u'\u00B3', u'\u1039\u100B', output)  # tatalin
+    output = re.sub(u'\u00B2', u'\u1039\u100C', output)  # hta-won-bae
+    output = re.sub(u'\u0050', u'\u1039\u100F', output)  # na-gyi
+    output = re.sub(u'[\u00C5\u00E5]', u'\u1039\u1010', output)  # ta
+    output = re.sub(u'[\u00A6\u00AC]', u'\u1039\u1011', output)  # hta
+    output = re.sub(u'\u00B4', u'\u1039\u1012', output)  # da-dwe
+    output = re.sub(u'\u00A8', u'\u1039\u1013', output)  # da-out
+    output = re.sub(u'\u00E9', u'\u1039\u1014', output)  # na
+    output = re.sub(u'\u00DC', u'\u1039\u1015', output)  # pa
+    output = re.sub(u'\u00E6', u'\u1039\u1016', output)  # pha
+    output = re.sub(u'\u00C1', u'\u1039\u1017', output)  # ba-htet
+    output = re.sub(u'\u00C7', u'\u1039\u1018', output)  # ba
+    output = re.sub(u'\u00AE', u'\u1039\u1019', output)  # ma
+    output = re.sub(u'\u2019', u'\u1039\u101C', output)  # la
+    output = re.sub(u'\u00C9', u'\u1039\u1010\u103D', output)  # ta-wa-swe
+
+    #  ####
+
+    output = re.sub(u'\u0040', u'\u100F\u1039\u100D', output)  # gan-da
+    output = re.sub(u'\u00A5', u'\u100B\u1039\u100B', output)  # double-tatalin-jake
+    output = re.sub(u'\u00B9', u'\u100D\u1039\u100E', output)  # da-yin-mode+kaut
+    output = re.sub(u'\u00D7', u'\u100D\u1039\u100D', output)  # double-da-yin-kaut
+    return output
+
